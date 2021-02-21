@@ -3,11 +3,11 @@ import React from 'react'
 function BookSearch() {
   return (
     <div className='bg-theme p-10 mx-20 my-4 rounded-md'>
-      <h1 className='text-3xl text-white m-5 text-center'>Book Search</h1>
+      <h1 className='text-5xl text-white m-5 text-center font-bilbo'>Search your book below</h1>
       <div className="relative text-gray-600 flex justify-center">
           <input 
           type="search" 
-          name="serch" 
+          name="search" 
           placeholder="Search" 
           className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none "/>
         <button type="submit" className=" right-0 top-0 my-auto mr-4">

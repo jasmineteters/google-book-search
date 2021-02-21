@@ -1,5 +1,8 @@
 import React, { useState, Component } from 'react';
 import { Link } from 'react-router-dom';
+import Home from '../../Pages/Home';
+import SavePage from '../../Pages/Save';
+import SearchPage from '../../Pages/Search';
 
 class Navbar extends Component {
   state = {
@@ -28,13 +31,13 @@ class Navbar extends Component {
         <header className='p-4 pt-2  laptop:hidden text-white'>
           <nav className='flex justify-between'>
             <div className=''>
-              <a href='index.html'>
+              <Link to='/'>
                 <img
                   src='https://res.cloudinary.com/dsj0x6kfo/image/upload/v1613874970/google%20book%20search.png'
                   className='h-52 object-contain object-right transform origin-bottom-left hover:-rotate-12 transition duration-300'
                   alt='JT Web Dev Logo'
                 />
-              </a>
+              </Link>
             </div>
             <div className='flex'>
               <div className='flex flex-col justify-start my-auto '>
@@ -61,7 +64,7 @@ class Navbar extends Component {
               >
                 <div className='text-2xl font-thin'>
                   <p className='flex'>
-                    <Link to='/' className=''>
+                    <Link to='/search' className=''>
                       <p className='pr-3'> Search</p>
                     </Link>
                     <svg
@@ -75,14 +78,21 @@ class Navbar extends Component {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth='{2}'
-                        d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+                        d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
+                      />
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth='{2}'
+                        d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
                       />
                     </svg>
                   </p>
                 </div>
+
                 <div className='text-2xl font-thin'>
                   <p className='flex'>
-                    <Link to='/portfolio' className=''>
+                    <Link to='/save' className=''>
                       <p className='pr-3'> Saved</p>
                     </Link>
                     <svg
@@ -133,30 +143,32 @@ class Navbar extends Component {
         <header className='hidden laptop:block flex flex-row '>
           <nav className='flex '>
             <div className='w-1/2'>
-              <a href='index.html'>
+              <Link to='/'>
                 <img
                   src='https://res.cloudinary.com/dsj0x6kfo/image/upload/v1613874970/google%20book%20search.png'
                   className='h-52 object-contain object-right transform origin-bottom-left hover:-rotate-12 transition duration-300'
                   alt='Google Book Search'
                 />
-              </a>
+              </Link>
             </div>
             <div className='flex w-1/2 justify-end items-center'>
               <div id='menu' className='flex flex-row text-right'>
                 <div className='text-3xl font-thin text-white '>
                   <p className='flex font-Roboto'>
                     <Link
-                      to='/'
-                      className='py-2 px-4 mx-3 hover:shadow-2xl hover:bg-greyViolet rounded-xl'
+                      to='/search'
+                      className='py-2 px-4 mx-3 mr-10 hover:shadow-2xl hover:bg-greyViolet rounded-xl'
                     >
                       Search
                     </Link>
                   </p>
                 </div>
+              </div>
+              <div id='menu' className='flex flex-row text-right'>
                 <div className='text-3xl font-thin text-white '>
                   <p className='flex font-Roboto'>
                     <Link
-                      to='/portfolio'
+                      to='/save'
                       className='py-2 px-4 mx-3 mr-10 hover:shadow-2xl hover:bg-greyViolet rounded-xl'
                     >
                       Saved

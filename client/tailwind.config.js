@@ -6,10 +6,14 @@ module.exports = {
       fontFamily: {
         Roboto: ['Roboto Slab', 'serif'],
         Nunito: ['Nunito', 'sans-serif'],
+        bilbo: ['Bilbo Swash Caps', 'cursive']
       },
       colors: {
         theme: '#C7998C',
         greyViolet: '#8389A0',
+        purpleNavy: '#4F598A',
+        crayolaYellow: '#FFCF7A',
+        copperRed: '#D56D47',
       },
       screens: {
         phone: '320px',
