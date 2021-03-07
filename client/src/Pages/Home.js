@@ -9,6 +9,8 @@ const Home = () => {
     <>
       <Navbar />
       <Banner />
+      <BookSearch/>
+
     </>
   );
 };
